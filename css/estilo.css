@@ -1,26 +1,203 @@
+
+/* Sistema de diseño del Proyecto SPA */
+
+:root {
+    --verde-salvia: #6B8F71;
+    --verde-oscuro: #2F4F3A;
+    --crema: #F7F3EA;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F7F3EA;
-    color: #2F4F3A;
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: var(--crema);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 8%;
+    background-color: var(--blanco);
+    border-bottom: 1px solid #E5E1D8;
+}
+
+.marca {
+    color: var(--verde-oscuro);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.estado {
+    padding: 7px 14px;
+    border-radius: 20px;
+    background-color: var(--crema);
+    color: var(--verde-oscuro);
+    font-size: 13px;
 }
 
 main {
-    max-width: 800px;
-    margin: 64px auto;
-    padding: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.presentacion {
+    padding: 72px 48px;
+    background-color: var(--blanco);
+    border-radius: 18px;
     text-align: center;
-    background-color: #FFFFFF;
-    border-radius: 12px;
+}
+
+.etiqueta {
+    color: var(--verde-salvia);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 700;
+    max-width: 750px;
+    margin: 16px auto;
+    color: var(--verde-oscuro);
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
 }
 
-p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #333333;
+.descripcion {
+    max-width: 650px;
+    margin: 20px auto 28px;
+    font-size: 17px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    background-color: var(--verde-salvia);
+    color: var(--blanco);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover,
+.boton:focus-visible {
+    background-color: var(--verde-oscuro);
+}
+
+.diseno {
+    padding: 56px 8px 24px;
+    text-align: center;
+}
+
+h2 {
+    margin: 8px 0;
+    color: var(--verde-oscuro);
+    font-size: 30px;
+}
+
+.texto-seccion {
+    margin-bottom: 28px;
+}
+
+.paleta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 16px;
+    text-align: left;
+}
+
+.color {
+    overflow: hidden;
+    padding: 12px;
+    background-color: var(--blanco);
+    border-radius: 12px;
+}
+
+.muestra {
+    height: 90px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.verde-salvia {
+    background-color: var(--verde-salvia);
+}
+
+.verde-oscuro {
+    background-color: var(--verde-oscuro);
+}
+
+.crema {
+    background-color: var(--crema);
+    border: 1px solid #E5E1D8;
+}
+
+.blanco {
+    background-color: var(--blanco);
+    border: 1px solid #E5E1D8;
+}
+
+.gris {
+    background-color: var(--gris-oscuro);
+}
+
+.color strong,
+.color span {
+    display: block;
+}
+
+.color strong {
+    color: var(--verde-oscuro);
+    font-size: 14px;
+}
+
+.color span {
+    color: var(--gris-oscuro);
+    font-size: 13px;
+}
+
+footer {
+    padding: 24px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 18px 20px;
+    }
+
+    main {
+        padding: 24px 16px;
+    }
+
+    .presentacion {
+        padding: 48px 20px;
+    }
+
+    .paleta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
